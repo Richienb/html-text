@@ -1,14 +1,25 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Extract text from HTML.
+ * @param input The HTML to strip the tags from.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const htmlText = require("html-text");
+ *
+ * htmlText(`
+ * <!DOCTYPE html>
+ * <html id="home" lang="en">
+ *
+ * <body>
+ *   <main>
+ *     <p>Site Content.</p>
+ *   </main>
+ * </body>
+ *
+ * </html>
+ * `);
+ * //=> 'Site Content.'
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function htmlText(input: string): string;
 
-export = theModule;
+export = htmlText;

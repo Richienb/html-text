@@ -1,7 +1,9 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const pretty = require("pretty")
+const stripTags = require("striptags")
 
-	return `${input} & ${postfix}`
+module.exports = (input) => {
+	if (typeof input !== "string") throw new TypeError("`input` must be a string!")
+	return stripTags(pretty(input, { ocd: true, indent_size: 0 })).trim()
 }

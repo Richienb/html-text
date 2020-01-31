@@ -1,41 +1,45 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# HTML Text [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/html-text/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/html-text)
 
-My awesome module.
+Extract text from HTML.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/html-text.png)](https://npmjs.com/package/html-text)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install html-text
 ```
+
+## Strategy
+
+The input HTML is prettified to clean it up and unindent the code, stripped from tags and trimmed to removed newlines and spaces.
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const htmlText = require("html-text");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+htmlText(`
+<!DOCTYPE html>
+<html id="home" lang="en">
+
+<body>
+  <main>
+    <p>Site Content.</p>
+  </main>
+</body>
+
+</html>
+`);
+//=> 'Site Content.'
 ```
 
 ## API
 
-### theModule(input, options?)
+### htmlText(input)
 
 #### input
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The HTML to strip the tags from.

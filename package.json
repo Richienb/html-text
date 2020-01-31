@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "html-text",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Extract text from HTML.",
+	"repository": "https://github.com/Richienb/html-text.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -11,14 +11,28 @@
 		"index.d.ts"
 	],
 	"engines": {
-		"node": ">=10"
+		"node": ">=4"
 	},
 	"scripts": {
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"html",
+		"text",
+		"strip",
+		"tags",
+		"indent",
+		"none",
+		"prettier",
+		"prettify",
+		"beautify",
+		"trim"
+	],
+	"dependencies": {
+		"pretty": "^2.0.0",
+		"striptags": "^3.1.1"
+	},
 	"devDependencies": {
 		"ava": "^3.0.0",
 		"eslint-config-richienb": "^0.3.0",
