@@ -1,6 +1,6 @@
 {
 	"name": "html-text",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Extract text from HTML.",
 	"repository": "https://github.com/Richienb/html-text.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
